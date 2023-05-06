@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World from Maven to Tomcat!</h2>
+<h2>Hello World from JEnkins Automation World..!</h2>
 </body>
 </html>
