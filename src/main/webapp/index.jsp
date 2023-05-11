@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello from JEnkins Automation World..!!</h2>
+<h2>Hello from Ubuntuuu..!!</h2>
 </body>
 </html>
