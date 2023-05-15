@@ -3,6 +3,7 @@ pipeline {
 	environment {
         VERSION = '1.2.0'
         X = '10'
+	}
     stages {
 	  stage('clean WS') {
 		steps {
