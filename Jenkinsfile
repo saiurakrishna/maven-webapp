@@ -1,5 +1,8 @@
 pipeline {
     agent any
+	environment {
+        VERSION = '1.2.0'
+        X = '10'
     stages {
 	  stage('clean WS') {
 		steps {
@@ -11,6 +14,12 @@ pipeline {
              git 'https://github.com/saiurakrishna/maven-webapp.git'
             }
         }
+	    stage('printing env variables') {
+		    steps {
+			    echo "This is my app ${VERSION}"
+			    echo "The value of x is ${X}"
+		    }
+	    }
         stage('validate') {
             steps {
                sh 'mvn validate'    
