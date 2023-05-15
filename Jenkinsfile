@@ -4,6 +4,10 @@ pipeline {
         VERSION = '1.2.0'
         X = '10'
 	}
+	tools {
+	git 'Default'
+	maven 'maven'
+	}
     stages {
 	  stage('clean WS') {
 		steps {
