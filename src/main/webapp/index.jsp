@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello from Jenkins Pipeline!!</h2>
+<h2>Welcome to automation World...!!</h2>
 </body>
 </html>
