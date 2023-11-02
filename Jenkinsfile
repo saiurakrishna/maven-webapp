@@ -1,5 +1,8 @@
 pipeline {
     agent any
+	parameters {
+        string(name: 'BRANCH', description: 'Enter the branch name', defaultValue: 'master')
+    }
 	environment {
         VERSION = '1.2.0'
         X = '10'
@@ -16,7 +19,10 @@ pipeline {
 	}
         stage('Git checkout') {
             steps {
-             git 'https://github.com/saiurakrishna/maven-webapp.git'
+		    script {
+                    def selectedBranch = params.BRANCH
+                    checkout([$class: 'GitSCM', branches: [[name: selectedBranch]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/saiurakrishna/maven-webapp.git']]])
+                }
             }
         }
 	    stage('printing env variables') {
